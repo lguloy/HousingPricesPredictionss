@@ -1,1 +1,2 @@
-# HousingPricesPredictionss
+# HousePricingPredictions
+HousePricingPredictions
