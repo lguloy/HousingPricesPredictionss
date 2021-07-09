@@ -21,7 +21,7 @@ app = Flask(__name__)
 from flask_sqlalchemy import SQLAlchemy
 
 ## CREATE CONNECTION ##
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '') or f'postgresql+psycopg2://postgres:{password}@housingpriceprediction.cxgg7v5earry.us-east-2.rds.amazonaws.com:5432/postgres'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '').replace("://", "ql://", 1) or f'postgresql+psycopg2://postgres:{password}@housingpriceprediction.cxgg7v5earry.us-east-2.rds.amazonaws.com:5432/postgres'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 Features = create_classes(db)
