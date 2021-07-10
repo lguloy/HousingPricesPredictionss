@@ -11,91 +11,91 @@
     <link rel="stylesheet" type="text/css" href="../static/style.css"> 
 </head>
 
-<body style="background-color: rgb(164, 188, 231);">
+<body style="background-color: rgb(181, 234, 241);">
 
     
 
-    <div class="header_style" style="text-align: center; background-color: ivory;">
+    <div class="header_style" style="text-align: center; background-color: cadetblue;">
         <h1>Housing Sale Prices Predictions</h1>
-        <p>Enter the given features!</p>
+        <p>Enter the given features to predict house prices!</p>
     </div>
 
+    <nav class="navbar navbar-light bg-light rounded-3 border border-2 border-secondary">
+        <form class="container-fluid justify-content-center gap-4" style="margin-bottom: 1px;">
+            <a href="/" class="btn btn-success me-2" role="button">Home</a>
+            <a href="/visualizations" class="btn btn-success me-2" role="button">Visualizations</a>
+            <a href="/modeling" class="btn btn-success me-2" role="button">Model</a>
+        </form>
+    </nav>
+
     
-    <div class="container">
-        <nav class="navbar navbar-light bg-light">
-            <form class="container-fluid justify-content-start">
-              <button class="btn btn-outline-success me-2" type="button">Main button</button>
-              <button class="btn btn-sm btn-outline-secondary" type="button">Smaller button</button>
-            </form>
-          </nav>
+    <div class="container border border-2 rounded-3 border-secondary" style="background-color: cadetblue; padding: 20px;">
+        
 
 
-            <form method="POST" action="/" role="form", name="houseform">
+            <form method="POST" action="/" role="form", name="houseform" style="padding-left: 200px ; padding-right: 200px; ">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group form_margin">
-                            <label for="YearBuilt">Year Built</label>
+                            <label for="YearBuilt" class="label_color">Year Built</label>
                             <input type="text" class="form-control" id="YearBuilt" name="Yearbuilt" placeholder="Year">
                             
                         </div>
                         <div class="form-group form_margin">
-                            <label for="1stFlrSF">First Floor Area (sq. ft)</label>
+                            <label for="1stFlrSF" class="label_color">First Floor Area (sq. ft)</label>
                             <input type="text" class="form-control" id="1stFlrSF" name="1stFlrSF" placeholder="Area">
                         </div>
                         <div class="form-group form_margin">
-                            <label for="GrLivArea">Above Ground Living Area (sq.ft)</label>
+                            <label for="GrLivArea" class="label_color">Above Ground Living Area (sq.ft)</label>
                             <input type="text" class="form-control" id="GrLivArea" name="GrLivArea" placeholder="Area">
                         </div>
                         <div class = "form-group form_margin">
-                            <label for='LotArea'>Lot size (sq.ft)</label>
+                            <label for='LotArea' class="label_color">Lot size (sq.ft)</label>
                             <input type="text" class= "form-control" id="LotArea" name="LotArea" placeholder="Area">
                         </div>
                         <div class = "form-group form_margin">
-                            <label for='GarageArea'>Garage size (sq.ft)</label>
+                            <label for='GarageArea' class="label_color">Garage size (sq.ft)</label>
                             <input type="text" class= "form-control" id="GarageArea" name="GarageArea" placeholder="Area">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class = "form-group form_margin">
-                            <label for='BsmtUnfSF'>Unfinished Basement size (sq.ft)</label>
+                            <label for='BsmtUnfSF' class="label_color">Unfinished Basement size (sq.ft)</label>
                             <input type="text" class= "form-control" id="BsmtUnfSF" name="BsmtUnfSF" placeholder="Area">
                         </div>
                         <div class = "form-group form_margin">
-                            <label for='TotalBsmtSF'>Total Basement size (sq.ft)</label>
+                            <label for='TotalBsmtSF' class="label_color">Total Basement size (sq.ft)</label>
                             <input type="text" class= "form-control" id="TotalBsmtSF" name="TotalBsmtSF" placeholder="Area">
                         </div>
                         <div class = "form-group form_margin">
-                            <label for='LotFrontage'>Lot Frontage (ft.)</label>
+                            <label for='LotFrontage' class="label_color">Lot Frontage (ft.)</label>
                             <input type="text" class= "form-control" id="LotFrontage" name="LotFrontage" placeholder="Distance">
                         </div>
                         <div class = "form-group form_margin">
-                            <label for='GarageYrBlt'>Year</label>
-                            <input type="text" class= "form-control" id="GarageYrBlt" name="GarageYrBlt" placeholder="Area">
+                            <label for='GarageYrBlt' class="label_color">Garage Year Built</label>
+                            <input type="text" class= "form-control" id="GarageYrBlt" name="GarageYrBlt" placeholder="Year">
                         </div>
                         <div class = "form-group form_margin">
-                            <label for='MoSold'>Lot size (sq.ft)</label>
+                            <label for='MoSold' class="label_color">Lot size (sq.ft)</label>
                             <input type="text" class= "form-control" id="MoSold" name="MoSold" placeholder="Area">
                         </div>
                         
                     </div>
                 </div>
                 
-                <div>
-                <input type="submit" value="Submit" class="btn btn-primary">
+                <div class="d-grid col-4 mx-auto" style="text-align: center; margin-top: 10px;">
+                    <input type="submit" value="Submit" class="btn btn-success label_color">
                 </div>
 
             </form> 
             
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card" style="margin-top: 50px;">
+        <div class="d-grid col-6 mx-auto" style="text-align: center;">
+                <div class="card" style="margin-top: 10px;">
                     <div class="card-body">
                     <h5 class="card-title">Price Prediction</h5>
-                    
                     <p class="card-text" id="predicted">{{ prices }}</p>   
                     </div>
                 </div>
-            </div>
         </div>
     </div>
 

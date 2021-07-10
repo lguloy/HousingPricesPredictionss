@@ -6,3 +6,24 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+h1{
+    font-weight: 900;
+
+}
+
+h2{
+    font-weight: 600;
+    color: white;
+}
+
+.label_color{
+    color: white;
+    font-weight: 500;
+    font-size: large;
+}
+
+.tableaumargins{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+

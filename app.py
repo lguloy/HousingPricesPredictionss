@@ -65,6 +65,14 @@ def home():
         return render_template("index.html", prices=predicted_price)
     
     return render_template("index.html", prices=prices)
+
+@app.route("/visualizations")
+def visualization():
+    return render_template("Dashboard.html")
+
+@app.route("/modeling")
+def modeling():
+    return render_template("model.html")
 # =============================================================================
 # @app.route("/send", methods=["GET", "POST"])
 # def send():
